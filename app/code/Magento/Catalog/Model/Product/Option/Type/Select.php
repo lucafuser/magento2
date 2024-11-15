@@ -92,9 +92,11 @@ class Select extends \Magento\Catalog\Model\Product\Option\Type\DefaultType
             if (!$this->_isSingleSelection()) {
                 if (is_string($value)) {
                     $value = explode(',', $value);
+                } else {
+                    $value = [$value];
                 }
                 $valuesCollection = $option->getOptionValuesByOptionId($value, $this->getProduct()->getStoreId());
-                $valueCount = is_array($value) ? count($value) : 0;
+                $valueCount = count($value);
                 if ($valuesCollection->count() != $valueCount) {
                     $this->setIsValid(false);
                     throw new LocalizedException($this->_getWrongConfigurationMessage());
