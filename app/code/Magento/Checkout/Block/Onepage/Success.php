@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright 2024 Adobe
+ * All Rights Reserved.
  */
 namespace Magento\Checkout\Block\Onepage;
 
@@ -65,7 +65,7 @@ class Success extends \Magento\Framework\View\Element\Template
     /**
      * Initialize data and prepare it for output
      *
-     * @return string
+     * @return $this
      */
     protected function _beforeToHtml()
     {
