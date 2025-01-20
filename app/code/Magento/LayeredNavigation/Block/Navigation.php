@@ -5,10 +5,10 @@
  */
 namespace Magento\LayeredNavigation\Block;
 
+use Magento\Catalog\Block\Product\ProductList\Toolbar;
+use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\View\Element\Template;
-use Magento\Catalog\Model\ResourceModel\Product\Collection;
-use Magento\Catalog\Block\Product\ProductList\Toolbar;
 
 /**
  * Catalog layered navigation view block
@@ -128,7 +128,7 @@ class Navigation extends \Magento\Framework\View\Element\Template
         return (
             $this->getLayer()->getCurrentCategory()->getDisplayMode() !== \Magento\Catalog\Model\Category::DM_PAGE
             || $request->getRouteName() === 'catalogsearch'
-            )
+        )
             && $this->visibilityFlag->isEnabled($this->getLayer(), $this->getFilters());
     }
 
