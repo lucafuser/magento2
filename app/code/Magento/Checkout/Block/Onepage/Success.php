@@ -127,6 +127,8 @@ class Success extends \Magento\Framework\View\Element\Template
     }
 
     /**
+     * Get continue url
+     *
      * @return string
      * @since 100.2.0
      */
