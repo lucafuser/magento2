@@ -24,8 +24,6 @@ class Navigation extends \Magento\Framework\View\Element\Template
     private const PRODUCT_LISTING_TOOLBAR_BLOCK = 'product_list_toolbar';
 
     /**
-     * Catalog layer
-     *
      * @var \Magento\Catalog\Model\Layer
      */
     protected $_catalogLayer;
